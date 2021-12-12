@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 4b</title>
+</head>
+<body>
+<input type="text" id="soA" placeholder="nhập số a">
+<input type="text" id="soB" placeholder="nhập số b">
+<input type="button" onclick="tinhToan()" value="Tính">
+<p id="traKetQua"></p>
+<script>
+    function tinhToan(){
+        let a = parseFloat(document.getElementById("soA").value);
+        let b = parseFloat(document.getElementById("soB").value);
+        let tong = a + b;
+        document.getElementById("traKetQua").innerHTML = " tổng bằng: " + tong ;
+    }
+</script>
+</body>
+</html>

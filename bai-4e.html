@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-4e</title>
+</head>
+<body>
+<input type="text" id="canhA" placeholder="canh a">
+<input type="text" id="canhB" placeholder="canh b">
+<input type="text" id="canhC" placeholder="canh c">
+<input type="button" onclick="kiemTra()" value="kiem tra">
+<p id="traKetQua"></p>
+<script>
+    function kiemTra() {
+
+        let a = parseFloat(document.getElementById("canhA").value);
+        let b = parseFloat(document.getElementById("canhB").value);
+        let c = parseFloat(document.getElementById("canhC").value);
+
+        if ((a + b > c && a + c > b && b + c > a)) {
+            if (a == b && a == c && b == c) {
+                document.getElementById("traKetQua").innerHTML = "a, b, c la 3 canh cua mot tam giac deu."
+            } else if (a == b != c || a == c != b || b == c != a) {
+                if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
+                    document.getElementById("traKetQua").innerHTML = "a, b, c la 3 canh cua mot tam giac vuong can."
+                } else
+                    document.getElementById("traKetQua").innerHTML = "a, b, c la 3 canh cua mot tam giac can."
+            } else if (a * a - b * c == 0 || b * b - a * c == 0 || c * c - a * b == 0) {
+                document.getElementById("traKetQua").innerHTML = "a, b, c la 3 canh cua mot tam giac vuong."
+            } else document.getElementById("traKetQua").innerHTML = "a, b, c la 3 canh cua mot tam giac thuong."
+        } else document.getElementById("traKetQua").innerHTML = "a, b, c khong phai la ba canh cua tam giac"
+    }
+
+</script>
+</body>
+</html>

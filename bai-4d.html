@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-4d</title>
+</head>
+<body>
+<input type="text" placeholder="mời nhập năm: " id="soNam">
+<button onclick="chuyenDoi()">Nhập</button>
+<p id="traKetQua"></p>
+<script>
+    function chuyenDoi() {
+        let a = parseFloat(document.getElementById("soNam").value);
+        let b = Math.round(a/100) ;
+        document.getElementById("traKetQua").innerHTML = "năm " + a + " thuộc thế kỉ: " + b + "(TCN)"
+    }
+</script>
+</body>
+</html>

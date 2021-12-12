@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAU 4a</title>
+</head>
+<body>
+<input type="text" id="soA" placeholder="nhập số a">
+
+<input type="button" onclick="tinhToan()" value="Tính">
+<p id="traKetQua"></p>
+<p id="traKetQua2"></p>
+
+<script>
+    function tinhToan(){
+        let a = parseFloat(document.getElementById("soA").value);
+        // let b = parseFloat(document.getElementById("soB").value);
+        let chuVi = 4 * a;
+        let dienTich = a * a;
+        document.getElementById("traKetQua").innerHTML = " chu vi là: " + chuVi ;
+        document.getElementById("traKetQua2").innerHTML = " diện tích là: : " + dienTich ;
+    }
+</script>
+</body>
+</html>

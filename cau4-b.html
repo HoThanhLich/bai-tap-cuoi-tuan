@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 4b</title>
+</head>
+<body>
+<input type="text" id="soA" placeholder="nhập số a">
+<input type="text" id="soB" placeholder="nhập số b">
+<input type="button" onclick="tinhToan()" value="Tính">
+<p id="binhPhuong"></p>
+<p id="luyThua"></p>
+<script>
+    function tinhToan(){
+        let a = parseFloat(document.getElementById("soA").value);
+        let b = parseFloat(document.getElementById("soB").value);
+        let binhPhuong = a * a;
+        let luyThua = Math.pow(a,b);
+        document.getElementById("binhPhuong").innerHTML = a + " bình phương bằng: " + binhPhuong ;
+        document.getElementById("luyThua").innerHTML = a + " mũ "+ b + " bằng: " + luyThua ;
+    }
+</script>
+</body>
+</html>
